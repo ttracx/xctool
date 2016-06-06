@@ -7,7 +7,6 @@
 *.xcodeproj/xcuserdata/*.xcuserdatad
 *.xcuserdatad
 xcuserdata
-build
 *.swp
 *.xccheckout
 .buckd
