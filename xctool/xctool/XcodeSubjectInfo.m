@@ -793,7 +793,7 @@ containsFilesModifiedSince:(NSDate *)sinceDate
                            @"SHOW_ONLY_BUILD_SETTINGS_FOR_FIRST_BUILDABLE" : @"YES"
                            }];
 
-    NSDictionary *result = LaunchTaskAndCaptureOutput(task, @"gathering build settings for a target");
+    NSDictionary *result = LaunchTaskAndCaptureOutputWithTimeoutAndRetry(task, @"gathering build settings for a target", 10.0f, 8);
 
     if (error) {
       *error = result[@"stderr"];
